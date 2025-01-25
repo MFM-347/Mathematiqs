@@ -1,0 +1,56 @@
+{
+  "name": "mathematiqs",
+  "version": "0.9.1",
+  "type": "module",
+  "description": "A simple and easy-to-use Maths library and CLI.",
+  "main": "./dist/fns.umd.js",
+  "module": "./dist/fns.esm.js",
+  "types": "./dist/fns.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "types": "./dist/fns.d.ts",
+    "import": "./dist/fns.es.js",
+    "require": "./dist/fns.cjs.js"
+  },
+  "bin": {
+    "maths": "./dist/cli.es.js"
+  },
+  "scripts": {
+    "build": "tsc && vite build",
+    "format": "prettier --write .",
+    "pretest": "npm run build",
+    "test": "npm unlink -g mathematiqs && npm link",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "math",
+    "math-cli",
+    "calculator",
+    "typescript",
+    "math-library",
+    "cli",
+    "command-line-tool",
+    "node-cli",
+    "math-functions",
+    "calculation",
+    "trigonometry",
+    "square-root",
+    "factorial",
+    "calc",
+    "mfm3478"
+  ],
+  "devDependencies": {
+    "@types/node": "^18.14.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.2.0",
+    "vite": "^6.0.11",
+    "vite-plugin-dts": "^1.7.3"
+  },
+  "author": "MFM-347",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^13.1.0"
+  }
+}

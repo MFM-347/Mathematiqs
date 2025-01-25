@@ -1,0 +1,4 @@
+*.min.*
+.github/**/*
+*-min.*
+dist/
