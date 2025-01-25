@@ -1,38 +1,37 @@
-export const add = (num1: number, num2: number) => num1 + num2;
-export const subtract = (num1: number, num2: number) => num1 - num2;
-export const multiply = (num1: number, num2: number) => num1 * num2;
-export const divide = (num1: number, num2: number) =>
-  num2 !== 0 ? num1 / num2 : 'Cannot divide by zero';
-export const sin = (num1: number) => Math.sin(num1);
-export const cos = (num1: number) => Math.cos(num1);
-export const tan = (num1: number) => Math.tan(num1);
-export const cosec = (num1: number) => 1 / Math.sin(num1);
-export const sec = (num1: number) => 1 / Math.cos(num1);
-export const cot = (num1: number) => 1 / Math.tan(num1);
-export const sqrt = (num1: number) => Math.sqrt(num1);
-export const pow = (num1: number, num2: number) => Math.pow(num1, num2);
-export const log = (num1: number) => Math.log(num1);
-export const log10 = (num1: number) => Math.log10(num1);
-export const round = (num1: number) => Math.round(num1);
+export const add = (a: number, b: number) => a + b;
+export const subtract = (a: number, b: number) => a - b;
+export const multiply = (a: number, b: number) => a * b;
+export const divide = (a: number, b: number) => (b !== 0 ? a / b : 'Cannot divide by zero');
+export const sin = (a: number) => Math.sin(a);
+export const cos = (a: number) => Math.cos(a);
+export const tan = (a: number) => Math.tan(a);
+export const cosec = (a: number) => 1 / Math.sin(a);
+export const sec = (a: number) => 1 / Math.cos(a);
+export const cot = (a: number) => 1 / Math.tan(a);
+export const sqrt = (a: number) => Math.sqrt(a);
+export const pow = (a: number, b: number) => Math.pow(a, b);
+export const log = (a: number) => Math.log(a);
+export const log10 = (a: number) => Math.log10(a);
+export const round = (a: number) => Math.round(a);
 export const random = () => Math.random();
-export const toRad = (num1: number): number => num1 * (Math.PI / 180);
-export const toDeg = (num1: number): number => num1 * (180 / Math.PI);
-export const fact = (num1: number): number[] => {
+export const toRad = (a: number): number => a * (Math.PI / 180);
+export const toDeg = (a: number): number => a * (180 / Math.PI);
+export const fact = (a: number): number[] => {
   const factors: number[] = [];
-  while (num1 % 2 === 0) {
+  while (a % 2 === 0) {
     factors.push(2);
-    num1 /= 2;
+    a /= 2;
   }
   let factor = 3;
-  while (factor * factor <= num1) {
-    while (num1 % factor === 0) {
+  while (factor * factor <= a) {
+    while (a % factor === 0) {
       factors.push(factor);
-      num1 /= factor;
+      a /= factor;
     }
     factor += 2;
   }
-  if (num1 > 2) {
-    factors.push(num1);
+  if (a > 2) {
+    factors.push(a);
   }
   return factors;
 };

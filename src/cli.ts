@@ -47,8 +47,8 @@ const operations: Record<string, Function> = {
 const program = new Command();
 
 program
-  .version('1.0.0')
-  .description('Maths CLI')
+  .version('0.9.2')
+  .description('mathematiqs CLI')
   .argument('<expression>', 'Maths function to evaluate (e.g. add(1,4))')
   .action((expression) => {
     try {

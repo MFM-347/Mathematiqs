@@ -1,7 +1,7 @@
 # Mathematiqs
 
-[![Version](https://img.shields.io/npm/v/Mathematiqs.svg)](https://www.npmjs.com/package/Mathematiqs)
-[![Downloads](https://img.shields.io/npm/dm/Mathematiqs)](https://www.npmjs.com/package/Mathematiqs)
+[![Version](https://img.shields.io/npm/v/mathematiqs.svg)](https://www.npmjs.com/package/mathematiqs)
+[![Downloads](https://img.shields.io/npm/dm/mathematiqs.svg)](https://www.npmjs.com/package/mathematiqs)
 [![Number of GitHub contributors](https://img.shields.io/github/contributors/MFM-347/Mathematiqs)](https://github.com/MFM-347/Mathematiqs/graphs/contributors)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MFM-347/Mathematiqs)](https://github.com/MFM-347/Mathematiqs/)
 [![Number of GitHub stars](https://img.shields.io/github/stars/MFM-347/Mathematiqs)](https://github.com/MFM-347/Mathematiqs/stargazers)
@@ -12,9 +12,9 @@ Mathematiqs is a simple yet powerful Maths library for TypeScript, designed to p
 ## Features
 
 - A collection of essential mathematical functions:
-  - Basic operations: `add`, `subtract`, `multiply`, `divide`
-  - Trigonometric functions: `sin`, `cos`, `tan`, `cosec`, `sec`, `cot`
-  - Other functions: `sqrt`, `pow`, `log`, `log10`, `round`, `random`, `toRad`, `toDeg`, `fact`
+  - **Basic operations:** `add`, `subtract`, `multiply`, `divide`
+  - **Trigonometric functions:** `sin`, `cos`, `tan`, `cosec`, `sec`, `cot`
+  - **Other functions:** `sqrt`, `pow`, `log`, `log10`, `round`, `random`, `toRad`, `toDeg`, `fact`
 - CLI support to evaluate mathematical expressions directly from the command line.
 - Full TypeScript support with type definitions for seamless development.
 - Lightweight and fast with minimal dependencies.

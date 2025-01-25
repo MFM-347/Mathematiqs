@@ -1,6 +1,6 @@
 {
   "name": "mathematiqs",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "type": "module",
   "description": "A simple and easy-to-use Maths library and CLI.",
   "main": "./dist/fns.umd.js",
@@ -15,7 +15,7 @@
     "require": "./dist/fns.cjs.js"
   },
   "bin": {
-    "maths": "./dist/cli.es.js"
+    "maths": "dist/cli.es.js"
   },
   "scripts": {
     "build": "tsc && vite build",
@@ -41,6 +41,9 @@
     "calc",
     "mfm3478"
   ],
+  "dependencies": {
+    "commander": "^13.1.0"
+  },
   "devDependencies": {
     "@types/node": "^18.14.0",
     "prettier": "^3.4.2",
@@ -48,9 +51,18 @@
     "vite": "^6.0.11",
     "vite-plugin-dts": "^1.7.3"
   },
-  "author": "MFM-347",
-  "license": "MIT",
-  "dependencies": {
-    "commander": "^13.1.0"
-  }
+  "homepage": "https://github.com/MFM-347/Mathematiqs#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MFM-347/Mathematiqs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MFM-347/Mathematiqs/issues"
+  },
+  "author": {
+    "name": "Farhan Madni",
+    "url": "https://github.com/mfm-347",
+    "email": "madnifm347@outlook.com"
+  },
+  "license": "MIT"
 }
