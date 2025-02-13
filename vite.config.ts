@@ -1,6 +1,6 @@
-import { resolve } from 'path';
-import { defineConfig } from 'vite';
-import dts from 'vite-plugin-dts';
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/guide/build.html#library-mode
 export default defineConfig({
@@ -22,5 +22,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [dts({ entryRoot: 'src', include: ['src/fns.ts', 'src/main.ts'] })],
-});
+  plugins: [dts({ entryRoot: 'src', include: ['src/fns.ts', 'src/cli.ts'] })],
+})
