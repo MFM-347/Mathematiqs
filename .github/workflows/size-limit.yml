@@ -5,38 +5,25 @@ on:
     paths:
       - "src/*.ts"
       - "vite.config.ts"
+      - "package.json"
     branches:
       - main
   pull_request:
     paths:
       - "src/*.ts"
       - "vite.config.ts"
+      - "package.json"
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   size:
     runs-on: ubuntu-latest
     env:
       CI_JOB_NUMBER: 1
-
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
-        run: npm run build
-
-      - name: Run size-limit
-        uses: andresz1/size-limit-action@v1
+      - uses: actions/checkout@v1
+      - uses: andresz1/size-limit-action@v1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: dist/

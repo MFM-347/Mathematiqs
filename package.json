@@ -11,7 +11,8 @@
   ],
   "size-limit": [
     {
-      "path": "dist/*"
+      "path": "dist/*",
+      "limit": "15 kB"
     }
   ],
   "exports": {
@@ -39,6 +40,8 @@
     "cli",
     "command-line-tool",
     "node-cli",
+    "logarithms",
+    "numbers",
     "math-functions",
     "calculation",
     "trigonometry",
@@ -48,8 +51,7 @@
     "mfm3478"
   ],
   "dependencies": {
-    "commander": "^13.1.0",
-    "crypto-random": "^2.0.1"
+    "commander": "^13.1.0"
   },
   "devDependencies": {
     "@size-limit/file": "^11.1.6",
