@@ -1,5 +1,12 @@
 # Mathematiqs
 
+[![Version](https://img.shields.io/npm/v/mathematiqs.svg)](https://www.npmjs.com/package/mathematiqs)
+[![Downloads](https://img.shields.io/npm/dm/mathematiqs.svg)](https://www.npmjs.com/package/mathematiqs)
+[![Number of GitHub contributors](https://img.shields.io/github/contributors/MFM-347/Mathematiqs)](https://github.com/MFM-347/Mathematiqs/graphs/contributors)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/MFM-347/Mathematiqs)](https://github.com/MFM-347/Mathematiqs/)
+[![Number of GitHub stars](https://img.shields.io/github/stars/MFM-347/Mathematiqs)](https://github.com/MFM-347/Mathematiqs/stargazers)
+[![License MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/MFM-347/Mathematiqs/blob/main/LICENSE)
+
 Mathematiqs is a robust TypeScript library offering a comprehensive suite of mathematical functions suitable for both browser and Node.js environments. It encompasses a wide array of operations, including basic arithmetic, trigonometry, logarithms, and more. Additionally, it features a command-line interface (CLI) for the convenient evaluation of expressions.
 
 ## What's New
