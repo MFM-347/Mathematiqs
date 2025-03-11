@@ -13,7 +13,7 @@ import {
   cot,
   sqrt,
   cbrt,
-  crt,
+  nthRoot,
   pow,
   log,
   log10,
@@ -47,7 +47,7 @@ const operations: Record<string, Function> = {
   cot,
   sqrt,
   cbrt,
-  crt,
+  nthRoot,
   pow,
   log,
   log10,
@@ -71,34 +71,38 @@ const operations: Record<string, Function> = {
 const program = new Command()
 
 program
-  .version('0.9.3')
-  .description('mathematiqs CLI')
-  .argument('<expression>', 'Maths function to evaluate (e.g. add(1,4))')
+  .version('1.0.0')
+  .description('Mathematiqs CLI')
+  .argument('<expression>', 'Math function to evaluate (e.g. add(1,4))')
   .action((expression) => {
     try {
       const match = expression.match(/(\w+)\(([-\d.\s,]+)\)/)
-      if (match) {
-        const [, func, args] = match
-        const params = args.split(',').map(Number)
-        if (params.some(isNaN)) {
-          console.error('Invalid argument(s). Ensure all arguments are numbers.')
-          return
-        }
-        if (operations[func]) {
-          const result = operations[func](...params)
-          console.log(`Result: ${result}`)
-        } else {
-          console.error(`Unknown function: ${func}`)
-        }
-      } else {
+      if (!match) {
         console.error('Invalid input format. Use function syntax like add(3,4).')
+        return
       }
+
+      const [, func, args] = match
+      const params = args.split(',').map(Number)
+
+      if (params.some(isNaN)) {
+        console.error('Invalid argument(s). Ensure all arguments are numbers.')
+        return
+      }
+
+      if (!(func in operations)) {
+        console.error(`Unknown function: ${func}`)
+        return
+      }
+
+      const result = operations[func](...params)
+      console.log(`Result: ${result}`)
     } catch (error: unknown) {
-      if (error instanceof Error) {
-        console.error('Error processing the input:', error.message)
-      } else {
-        console.error('An unknown error occurred.')
-      }
+      console.error(
+        error instanceof Error
+          ? `Error processing the input: ${error.message}`
+          : 'An unknown error occurred.',
+      )
     }
   })
 

@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Mathematiqs is a robust TypeScript library offering a comprehensive suite of mathematical functions",
-  "main": "./dist/fns.umd.js",
-  "module": "./dist/fns.esm.js",
+  "main": "./dist/fns.cjs.js",
+  "module": "./dist/fns.es.js",
   "types": "./dist/fns.d.ts",
   "files": [
     "dist"
